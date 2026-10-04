@@ -174,6 +174,45 @@ int main()
 
 
 #13#Create a program that intentionally contains a syntax error and identify it.
+Syntax Error Program:
+#include <stdio.h>
+
+int main() {
+    printf("Hello, World!"
+    return 0;
+}
+Syntax error: The closing ) is missing from the printf() statement
+Corrected Line:
+printf("Hello, World!");
 
 
 #14#Create a program that demonstrates a logical error and then correct it.
+Program with Logical Error:
+#include <stdio.h>
+
+int main() {
+    int a = 10, b = 5;
+    int sum;
+
+    sum = a - b;  // Logical error: subtraction instead of addition
+
+    printf("Sum = %d", sum);
+
+    return 0;
+}
+Logical error: The program is supposed to calculate the sum, but it uses a - b instead of a + b
+Corrected Program:
+#include <stdio.h>
+
+int main() {
+    int a = 10, b = 5;
+    int sum;
+
+    sum = a + b;
+
+    printf("Sum = %d", sum);
+
+    return 0;
+}
+Output:
+Sum = 15
