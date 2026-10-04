@@ -1,4 +1,5 @@
-#Write a program 
+#Write a C program using the switch-case statement to create a menu-driven calculator that repeatedly
+performs arithmetic operations until the user chooses to exit.
 #include<stdio.h>
 int main()
 {
@@ -57,3 +58,30 @@ while (choice != 5);
 
     return 0;
 }
+#Output
+----- MENU-DRIVEN CALCULATOR -----
+1. Addition
+2. Subtraction
+3. Multiplication
+4. Division
+5. Exit
+Enter your choice: 1
+Enter two numbers: 20 10
+Result = 30.00
+----- MENU-DRIVEN CALCULATOR -----
+1. Addition
+2. Subtraction
+3. Multiplication
+4. Division
+5. Exit
+Enter your choice: 3
+Enter two numbers: 5 4
+Result = 20.00
+----- MENU-DRIVEN CALCULATOR -----
+1. Addition
+2. Subtraction
+3. Multiplication
+4. Division
+5. Exit
+Enter your choice: 5
+Exiting the calculator...
