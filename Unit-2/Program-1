@@ -11,3 +11,7 @@ int main()
     printf("Result=%d\n",result);
     return 0;
 }
+#Output
+Expression: a + b * c
+a = 10, b = 5, c = 2
+Result = 20

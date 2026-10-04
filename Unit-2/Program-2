@@ -1,4 +1,4 @@
-
+Write a C program to accept a number from the user and check whether the given number is even or odd.
 #include<stdio.h>
 int main()
 {
@@ -15,8 +15,6 @@ int main()
     }
     return 0;
 }
-
-#Output:
-Expression: a + b * c
-a = 10, b = 5, c = 2
-Result = 20
+#Output
+Enter a number: 25
+25 is an Odd number.
