@@ -1,1 +1,179 @@
+#PPT PROGRAMS
+#1#Write a Simple Program to print Hello World.
+#include <stdio.h>
 
+int main()
+{
+printf("Hello World");
+
+return 0;
+}
+
+
+#2#Write a program to print Stident Details.
+#include <stdio.h>
+
+int main()
+{
+printf("Student Details");
+printf(“Student Name:XYZ”);
+printf(“Division:SOC”);
+printf(“College Name:MIT Art,Design and Technology University,Pune”);
+
+return 0;
+}
+
+
+#3#Write a program to accept the age of a person from the user and display  the entered age. 
+#include<stdio.h>
+
+int main()
+{
+int age;
+
+printf("Enter Age : ");
+
+scanf("%d",&age);
+
+printf("Age=%d",age);
+return 0;
+}
+#Output:
+Enter Age : 20
+Age=20
+
+
+#4#Write a program to accept two numbers from the user and display the sum of two numbers.
+#include <stdio.h>
+int main() {
+int num1, num2, sum;
+printf("Enter first number: ");
+scanf("%d", &num1);
+printf("Enter second number: ");
+scanf("%d", &num2);
+sum = num1 + num2;
+printf("Sum = %d\n", sum);
+return 0;
+}
+#Output:
+Enter first number: 10
+Enter second number: 20
+Sum = 30
+
+
+#5#Print Hello World.
+#include <stdio.h>
+
+int main()
+{
+printf("Hello World");
+return 0;
+}
+
+
+#6#Print your name, department, and college.
+#include <stdio.h>
+
+int main()
+{
+printf("Name: John Doe\n");
+printf("Department: Computer Science\n");
+printf("College: MIT Art, Design and Technology University, Pune\n");
+return 0;
+}
+
+
+#7#Read two integers and display their sum.
+#include <stdio.h>
+
+int main()
+{
+    int num1, num2, sum;
+
+    printf("Enter first number: ");
+    scanf("%d", &num1);
+
+    printf("Enter second number: ");
+    scanf("%d", &num2);
+
+    sum = num1 + num2;
+    printf("Sum = %d\n", sum);
+
+    return 0;
+}
+
+
+#8#Read radius and calculate the area of a circle.
+#include <stdio.h>
+#define PI 3.14159
+
+int main()
+{
+    float radius, area;
+    printf("Enter the radius of the circle: ");
+    scanf("%f", &radius);
+    area = PI * radius * radius;
+    printf("Area of the circle = %.2f\n", area);
+    return 0;
+}
+
+
+#9#Read marks and calculate the percentage.
+#include <stdio.h>
+
+int main()
+{
+    float marks, percentage;
+    printf("Enter the marks obtained: ");
+    scanf("%f", &marks);
+    percentage = marks / 100 * 100;
+    printf("Percentage = %.2f\n", percentage);
+    return 0;
+}
+
+
+#10#Read a character and display it using putchar().
+#include <stdio.h>
+
+int main()
+{
+    char ch;
+    printf("Enter a character: ");
+    scanf("%c", &ch);
+    printf("Character entered: ");
+    putchar(ch);
+    return 0;
+}
+
+
+#11#Demonstrate the use of variables and constants.
+#include <stdio.h>
+#define PI 3.14159
+
+int main()
+{
+    int variable = 10;
+    printf("Variable = %d\n", variable);
+    printf("Constant = %.5f\n", PI);
+    return 0;
+}
+
+
+#12#Write a program with both single-line and multi-line comments.
+#include <stdio.h>
+
+int main()
+{
+    // This is a single-line comment
+    /*
+     * This is a multi-line comment
+     */
+    printf("Hello, World!\n");
+    return 0;
+}
+
+
+#13#Create a program that intentionally contains a syntax error and identify it.
+
+
+#14#Create a program that demonstrates a logical error and then correct it.
