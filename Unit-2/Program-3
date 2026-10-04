@@ -1,4 +1,4 @@
-
+#Write a C program to accept a number from the user and determine whether it is positive, negative, orzero.
 #include<stdio.h>
 int main()
 {
@@ -19,3 +19,6 @@ int main()
     }
     return 0;
 }
+#Output
+Enter a number: -15
+-15 is a Negative number.
