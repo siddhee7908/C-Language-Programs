@@ -1,1 +1,86 @@
+#1#Display Array Elements and Their Memory Addresses
+Write a C program to accept elements of integer, float, and character arrays from the user and
+display the value and corresponding memory address of each array element.
+#include &lt;stdio.h&gt;
+
+int main()
+{
+int intArray[3];
+float floatArray[3];
+char charArray[3];
+int i;
+
+printf(&quot;Enter 3 integer elements:\n&quot;);
+for (i = 0; i &lt; 3; i++)
+{
+scanf(&quot;%d&quot;, &amp;intArray[i]);
+}
+
+printf(&quot;\nEnter 3 float elements:\n&quot;);
+for (i = 0; i &lt; 3; i++)
+{
+scanf(&quot;%f&quot;, &amp;floatArray[i]);
+}
+
+printf(&quot;\nEnter 3 character elements:\n&quot;);
+for (i = 0; i &lt; 3; i++)
+{
+scanf(&quot; %c&quot;, &amp;charArray[i]);
+}
+
+printf(&quot;\nInteger Array:\n&quot;);
+for (i = 0; i &lt; 3; i++)
+{
+printf(&quot;Value = %d, Address = %p\n&quot;,
+intArray[i], (void *)&amp;intArray[i]);
+}
+
+printf(&quot;\nFloat Array:\n&quot;);
+for (i = 0; i &lt; 3; i++)
+{
+printf(&quot;Value = %.2f, Address = %p\n&quot;,
+floatArray[i], (void *)&amp;floatArray[i]);
+}
+
+printf(&quot;\nCharacter Array:\n&quot;);
+for (i = 0; i &lt; 3; i++)
+{
+printf(&quot;Value = %c, Address = %p\n&quot;,
+charArray[i], (void *)&amp;charArray[i]);
+
+}
+
+return 0;
+}
+Output:
+Enter 3 integer elements:
+10
+20
+30
+
+Enter 3 float elements:
+1.5
+2.5
+3.5
+
+Enter 3 character elements:
+A
+B
+C
+
+Integer Array:
+Value = 10, Address = 0x7ffd1230
+Value = 20, Address = 0x7ffd1234
+Value = 30, Address = 0x7ffd1238
+
+Float Array:
+
+Value = 1.50, Address = 0x7ffd1240
+Value = 2.50, Address = 0x7ffd1244
+Value = 3.50, Address = 0x7ffd1248
+
+Character Array:
+Value = A, Address = 0x7ffd1250
+Value = B, Address = 0x7ffd1251
+Value = C, Address = 0x7ffd1252
 
