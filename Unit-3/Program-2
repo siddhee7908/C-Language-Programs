@@ -1,1 +1,37 @@
+#2#Sum of Elements of a One-Dimensional Array
+Write a C program to accept the elements of a one-dimensional array and calculate the sum of
+all its elements.
+#include &lt;stdio.h&gt;
 
+int main()
+{
+int arr[100];
+int n;
+int i;
+int sum = 0;
+
+printf(&quot;Enter the number of elements: &quot;);
+scanf(&quot;%d&quot;, &amp;n);
+
+printf(&quot;Enter %d elements:\n&quot;, n);
+
+for (i = 0; i &lt; n; i++)
+{
+scanf(&quot;%d&quot;, &amp;arr[i]);
+sum = sum + arr[i];
+}
+
+printf(&quot;Sum of array elements = %d\n&quot;, sum);
+
+return 0;
+}
+Output:
+Enter the number of elements: 5
+Enter 5 elements:
+10
+20
+30
+40
+50
+
+Sum of array elements = 150
