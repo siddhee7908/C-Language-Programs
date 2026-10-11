@@ -10,7 +10,7 @@ return 0;
 }
 
 
-#2#Write a program to print Stident Details.
+#2#Write a program to print Student Details.
 #include <stdio.h>
 
 int main()
