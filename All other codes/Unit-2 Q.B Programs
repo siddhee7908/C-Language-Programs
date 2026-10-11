@@ -1,0 +1,583 @@
+#1# Write a program to check whether a person is Adult or Minor
+#include <stdio.h>
+
+int main() {
+    int age;
+
+    printf("Enter age: ");
+    scanf("%d", &age);
+
+    if (age >= 18)
+        printf("Adult");
+    else
+        printf("Minor");
+
+    return 0;
+}
+
+
+#2# Write a program to check whether a number is zero or non-zero
+#include <stdio.h>
+
+int main() {
+    int n;
+
+    printf("Enter a number: ");
+    scanf("%d", &n);
+
+    if (n == 0)
+        printf("Zero");
+    else
+        printf("Non-Zero");
+
+    return 0;
+}
+
+
+#3# Write a program to check leap year
+#include <stdio.h>
+
+int main() {
+    int year;
+
+    printf("Enter year: ");
+    scanf("%d", &year);
+
+    if ((year % 400 == 0) || (year % 4 == 0 && year % 100 != 0))
+        printf("Leap Year");
+    else
+        printf("Not a Leap Year");
+
+    return 0;
+}
+
+
+#4# Write a program to check voting eligibility
+#include <stdio.h>
+
+int main() {
+    int age;
+
+    printf("Enter age: ");
+    scanf("%d", &age);
+
+    if (age >= 18)
+        printf("Eligible for Voting");
+    else
+        printf("Not Eligible for Voting");
+
+    return 0;
+}
+
+
+#5# Write a program to find maximum and mininmum of three numbers
+#include <stdio.h>
+
+int main() {
+    int a, b, c, max, min;
+
+    printf("Enter three numbers: ");
+    scanf("%d %d %d", &a, &b, &c);
+
+    max = a;
+    min = a;
+
+    if (b > max) max = b;
+    if (c > max) max = c;
+
+    if (b < min) min = b;
+    if (c < min) min = c;
+
+    printf("Maximum = %d\n", max);
+    printf("Minimum = %d", min);
+
+    return 0;
+}
+
+
+
+#6# Write a program to check Age Category – Child, Teenager or Adult
+#include <stdio.h>
+
+int main() {
+    int age;
+
+    printf("Enter age: ");
+    scanf("%d", &age);
+
+    if (age < 13)
+        printf("Child");
+    else if (age < 20)
+        printf("Teenager");
+    else
+        printf("Adult");
+
+    return 0;
+}
+
+
+#7# Write a program to check whether Number is Positive, Negative or Zero
+#include <stdio.h>
+
+int main() {
+    int n;
+
+    printf("Enter a number: ");
+    scanf("%d", &n);
+
+    if (n > 0)
+        printf("Positive");
+    else if (n < 0)
+        printf("Negative");
+    else
+        printf("Zero");
+
+    return 0;
+}
+
+
+#8# Write a program to check Divisibility by 3, 5, 7 and 11
+#include <stdio.h>
+
+int main() {
+    int n;
+
+    printf("Enter a number: ");
+    scanf("%d", &n);
+
+    if (n % 3 == 0 && n % 5 == 0 && n % 7 == 0 && n % 11 == 0)
+        printf("Divisible by 3, 5, 7 and 11");
+    else
+        printf("Not divisible by all 3, 5, 7 and 11");
+
+    return 0;
+}
+
+
+#9# Write a program to check Student Result – Pass or Fail
+#include <stdio.h>
+
+int main() {
+    float marks;
+
+    printf("Enter marks: ");
+    scanf("%f", &marks);
+
+    if (marks >= 40)
+        printf("Pass");
+    else
+        printf("Fail");
+
+    return 0;
+}
+
+
+#10# Write a program to check Exam Eligibility (Condition: Attendance ≥ 75% → Eligible)
+#include <stdio.h>
+
+int main() {
+    float attendance;
+
+    printf("Enter attendance percentage: ");
+    scanf("%f", &attendance);
+
+    if (attendance >= 75)
+        printf("Student is Eligible for Exam");
+    else
+        printf("Student is Not Eligible for Exam");
+
+    return 0;
+}
+
+
+#11# Write a program to reverse a Number
+#include <stdio.h>
+
+int main() {
+    int n, rev = 0, rem;
+
+    printf("Enter a number: ");
+    scanf("%d", &n);
+
+    while (n != 0) {
+        rem = n % 10;
+        rev = rev * 10 + rem;
+        n = n / 10;
+    }
+
+    printf("Reverse = %d", rev);
+
+    return 0;
+}
+
+
+#12# Write a program for Fibonacci Series
+#include <stdio.h>
+
+int main() {
+    int n, a = 0, b = 1, c, i;
+
+    printf("Enter number of terms: ");
+    scanf("%d", &n);
+
+    for (i = 1; i <= n; i++) {
+        printf("%d ", a);
+        c = a + b;
+        a = b;
+        b = c;
+    }
+
+    return 0;
+}
+
+
+#13# Write a program for Armstrong number
+#include <stdio.h>
+
+int main() {
+    int n, temp, rem, sum = 0;
+
+    printf("Enter a number: ");
+    scanf("%d", &n);
+
+    temp = n;
+
+    while (temp != 0) {
+        rem = temp % 10;
+        sum = sum + rem * rem * rem;
+        temp = temp / 10;
+    }
+
+    if (sum == n)
+        printf("Armstrong Number");
+    else
+        printf("Not an Armstrong Number");
+
+    return 0;
+}
+
+
+#14# Write a program for prime numbers
+#include <stdio.h>
+
+int main() {
+    int n, i, flag = 0;
+
+    printf("Enter a number: ");
+    scanf("%d", &n);
+
+    if (n <= 1)
+        flag = 1;
+
+    for (i = 2; i <= n / 2; i++) {
+        if (n % i == 0) {
+            flag = 1;
+            break;
+        }
+    }
+
+    if (flag == 0)
+        printf("Prime Number");
+    else
+        printf("Not a Prime Number");
+
+    return 0;
+}
+
+
+#15# Write a program for sum of all numbers from 1 to 25
+#include <stdio.h>
+
+int main() {
+    int i, sum = 0;
+
+    for (i = 1; i <= 25; i++)
+        sum = sum + i;
+
+    printf("Sum = %d", sum);
+
+    return 0;
+}
+
+
+#16# Write a program for Sum of Even/Odd Numbers from 1 to 25
+#include <stdio.h>
+
+int main() {
+    int i, evenSum = 0, oddSum = 0;
+
+    for (i = 1; i <= 25; i++) {
+        if (i % 2 == 0)
+            evenSum += i;
+        else
+            oddSum += i;
+    }
+
+    printf("Sum of Even Numbers = %d\n", evenSum);
+    printf("Sum of Odd Numbers = %d", oddSum);
+
+    return 0;
+}
+
+
+#17# Write a program to Display Even/Odd Numbers from 0 to 25
+#include <stdio.h>
+
+int main() {
+    int i;
+
+    printf("Even numbers:\n");
+    for (i = 0; i <= 25; i++) {
+        if (i % 2 == 0)
+            printf("%d ", i);
+    }
+
+    printf("\nOdd numbers:\n");
+    for (i = 0; i <= 25; i++) {
+        if (i % 2 != 0)
+            printf("%d ", i);
+    }
+
+    return 0;
+}
+
+
+#18# Write a program to Check whether a Number is Palindrome
+#include <stdio.h>
+
+int main() {
+    int n, temp, rev = 0, rem;
+
+    printf("Enter a number: ");
+    scanf("%d", &n);
+
+    temp = n;
+
+    while (temp != 0) {
+        rem = temp % 10;
+        rev = rev * 10 + rem;
+        temp = temp / 10;
+    }
+
+    if (rev == n)
+        printf("Palindrome Number");
+    else
+        printf("Not a Palindrome Number");
+
+    return 0;
+}
+
+
+#19# Write a program to Display Day Name using Number (1–7)
+#include <stdio.h>
+
+int main() {
+    int day;
+
+    printf("Enter day number (1-7): ");
+    scanf("%d", &day);
+
+    switch (day) {
+        case 1: printf("Monday"); break;
+        case 2: printf("Tuesday"); break;
+        case 3: printf("Wednesday"); break;
+        case 4: printf("Thursday"); break;
+        case 5: printf("Friday"); break;
+        case 6: printf("Saturday"); break;
+        case 7: printf("Sunday"); break;
+        default: printf("Invalid Day");
+    }
+
+    return 0;
+}
+
+
+#20# Write a program to Display Month Name using Number (1–12)
+#include <stdio.h>
+
+int main() {
+    int month;
+
+    printf("Enter month number (1-12): ");
+    scanf("%d", &month);
+
+    switch (month) {
+        case 1: printf("January"); break;
+        case 2: printf("February"); break;
+        case 3: printf("March"); break;
+        case 4: printf("April"); break;
+        case 5: printf("May"); break;
+        case 6: printf("June"); break;
+        case 7: printf("July"); break;
+        case 8: printf("August"); break;
+        case 9: printf("September"); break;
+        case 10: printf("October"); break;
+        case 11: printf("November"); break;
+        case 12: printf("December"); break;
+        default: printf("Invalid Month");
+    }
+
+    return 0;
+}
+
+
+#21# Write a program to Display Number in Words (0–9)
+#include <stdio.h>
+
+int main() {
+    int n;
+
+    printf("Enter a number (0-9): ");
+    scanf("%d", &n);
+
+    switch (n) {
+        case 0: printf("Zero"); break;
+        case 1: printf("One"); break;
+        case 2: printf("Two"); break;
+        case 3: printf("Three"); break;
+        case 4: printf("Four"); break;
+        case 5: printf("Five"); break;
+        case 6: printf("Six"); break;
+        case 7: printf("Seven"); break;
+        case 8: printf("Eight"); break;
+        case 9: printf("Nine"); break;
+        default: printf("Invalid Number");
+    }
+
+    return 0;
+}
+
+
+#22# Write a program to show Traffic Signal (1 = Red, 2 = Yellow, 3 = Green)
+#include <stdio.h>
+
+int main() {
+    int signal;
+
+    printf("Enter signal number (1-3): ");
+    scanf("%d", &signal);
+
+    switch (signal) {
+        case 1: printf("Red - Stop"); break;
+        case 2: printf("Yellow - Wait"); break;
+        case 3: printf("Green - Go"); break;
+        default: printf("Invalid Signal");
+    }
+
+    return 0;
+}
+
+
+#23# Wirte a program Calculate Area of Square, Rectangle, Triangle and Circle using Menu
+#include <stdio.h>
+
+int main() {
+    int choice;
+    float side, length, breadth, base, height, radius, area;
+
+    printf("1. Square\n");
+    printf("2. Rectangle\n");
+    printf("3. Triangle\n");
+    printf("4. Circle\n");
+
+    printf("Enter your choice: ");
+    scanf("%d", &choice);
+
+    switch (choice) {
+        case 1:
+            printf("Enter side: ");
+            scanf("%f", &side);
+            area = side * side;
+            printf("Area of Square = %.2f", area);
+            break;
+
+        case 2:
+            printf("Enter length and breadth: ");
+            scanf("%f %f", &length, &breadth);
+            area = length * breadth;
+            printf("Area of Rectangle = %.2f", area);
+            break;
+
+        case 3:
+            printf("Enter base and height: ");
+            scanf("%f %f", &base, &height);
+            area = 0.5 * base * height;
+            printf("Area of Triangle = %.2f", area);
+            break;
+
+        case 4:
+            printf("Enter radius: ");
+            scanf("%f", &radius);
+            area = 3.14 * radius * radius;
+            printf("Area of Circle = %.2f", area);
+            break;
+
+        default:
+            printf("Invalid Choice");
+    }
+
+    return 0;
+}
+
+
+#24# Wite a program to Display Season using Number (1 = Summer, 2 = Rainy, 3 = Winter)
+#include <stdio.h>
+
+int main() {
+    int season;
+
+    printf("Enter season number (1-3): ");
+    scanf("%d", &season);
+
+    switch (season) {
+        case 1: printf("Summer"); break;
+        case 2: printf("Rainy"); break;
+        case 3: printf("Winter"); break;
+        default: printf("Invalid Season");
+    }
+
+    return 0;
+}
+
+
+#25# Write a program to Print Grade based on a Grade (A, B, C, D, F)
+#include <stdio.h>
+
+int main() {
+    char grade;
+
+    printf("Enter grade (A, B, C, D, F): ");
+    scanf(" %c", &grade);
+
+    switch (grade) {
+        case 'A':
+        case 'a':
+            printf("Excellent");
+            break;
+
+        case 'B':
+        case 'b':
+            printf("Very Good");
+            break;
+
+        case 'C':
+        case 'c':
+            printf("Good");
+            break;
+
+        case 'D':
+        case 'd':
+            printf("Pass");
+            break;
+
+        case 'F':
+        case 'f':
+            printf("Fail");
+            break;
+
+        default:
+            printf("Invalid Grade");
+    }
+
+    return 0;
+}
