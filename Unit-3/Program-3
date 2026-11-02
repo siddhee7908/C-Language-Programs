@@ -1,1 +1,83 @@
+#3# Addition of Two Matrices
+Write a C program to read two matrices of the same order, perform matrix addition, and
+display the resultant matrix using a two-dimensional array.
+#include &lt;stdio.h&gt;
 
+int main()
+{
+int a[10][10];
+int b[10][10];
+int sum[10][10];
+int rows, columns;
+int i, j;
+
+printf(&quot;Enter number of rows: &quot;);
+scanf(&quot;%d&quot;, &amp;rows);
+
+printf(&quot;Enter number of columns: &quot;);
+scanf(&quot;%d&quot;, &amp;columns);
+
+printf(&quot;\nEnter elements of first matrix:\n&quot;);
+
+for (i = 0; i &lt; rows; i++)
+{
+for (j = 0; j &lt; columns; j++)
+{
+scanf(&quot;%d&quot;, &amp;a[i][j]);
+
+}
+}
+
+printf(&quot;\nEnter elements of second matrix:\n&quot;);
+
+for (i = 0; i &lt; rows; i++)
+{
+for (j = 0; j &lt; columns; j++)
+{
+scanf(&quot;%d&quot;, &amp;b[i][j]);
+}
+}
+
+for (i = 0; i &lt; rows; i++)
+{
+for (j = 0; j &lt; columns; j++)
+{
+sum[i][j] = a[i][j] + b[i][j];
+}
+}
+
+printf(&quot;\nResultant Matrix after Addition:\n&quot;);
+
+for (i = 0; i &lt; rows; i++)
+{
+for (j = 0; j &lt; columns; j++)
+
+{
+printf(&quot;%d\t&quot;, sum[i][j]);
+}
+
+printf(&quot;\n&quot;);
+}
+
+return 0;
+}
+Output:
+Enter number of rows: 2
+Enter number of columns: 2
+
+Enter elements of first matrix:
+1
+2
+3
+4
+
+Enter elements of second matrix:
+5
+6
+7
+8
+
+Resultant Matrix after Addition:
+
+6 8
+10 12
