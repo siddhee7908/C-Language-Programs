@@ -1,1 +1,132 @@
+#5.1# No Arguments, No Return Value
+#include &lt;stdio.h&gt;
+
+void area()
+{
+float base, height, result;
+
+printf(&quot;Enter base: &quot;);
+scanf(&quot;%f&quot;, &amp;base);
+
+printf(&quot;Enter height: &quot;);
+scanf(&quot;%f&quot;, &amp;height);
+
+result = 0.5 * base * height;
+
+printf(&quot;Area of triangle = %.2f\n&quot;, result);
+}
+
+int main()
+{
+area();
+
+return 0;
+}
+Output:
+Enter base: 10
+Enter height: 5
+Area of triangle = 25.00
+
+
+#5.2# Arguments, No Return Value
+#include &lt;stdio.h&gt;
+
+void area(float base, float height)
+{
+float result;
+
+result = 0.5 * base * height;
+
+printf(&quot;Area of triangle = %.2f\n&quot;, result);
+}
+
+int main()
+{
+
+float base, height;
+
+printf(&quot;Enter base: &quot;);
+scanf(&quot;%f&quot;, &amp;base);
+
+printf(&quot;Enter height: &quot;);
+scanf(&quot;%f&quot;, &amp;height);
+
+area(base, height);
+
+return 0;
+}
+Output:
+Enter base: 12
+Enter height: 8
+Area of triangle = 48.00
+
+
+#5.3# No Arguments, Returns a Value
+#include &lt;stdio.h&gt;
+
+float area()
+{
+float base, height;
+float result;
+
+printf(&quot;Enter base: &quot;);
+scanf(&quot;%f&quot;, &amp;base);
+
+printf(&quot;Enter height: &quot;);
+scanf(&quot;%f&quot;, &amp;height);
+
+result = 0.5 * base * height;
+
+return result;
+}
+
+int main()
+{
+float result;
+
+result = area();
+
+printf(&quot;Area of triangle = %.2f\n&quot;, result);
+
+return 0;
+}
+Output
+Enter base: 15
+Enter height: 6
+Area of triangle = 45.00
+
+
+#5.4# Arguments, Returns a Value
+#include &lt;stdio.h&gt;
+
+float area(float base, float height)
+{
+float result;
+
+result = 0.5 * base * height;
+
+return result;
+}
+
+int main()
+{
+float base, height;
+float result;
+
+printf(&quot;Enter base: &quot;);
+scanf(&quot;%f&quot;, &amp;base);
+
+printf(&quot;Enter height: &quot;);
+scanf(&quot;%f&quot;, &amp;height);
+
+result = area(base, height);
+
+printf(&quot;Area of triangle = %.2f\n&quot;, result);
+
+return 0;
+}
+Output
+Enter base: 20
+Enter height: 10
+Area of triangle = 100.00
 
