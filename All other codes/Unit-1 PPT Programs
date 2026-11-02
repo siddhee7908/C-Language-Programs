@@ -1,4 +1,3 @@
-#PPT PROGRAMS
 #1#Write a Simple Program to print Hello World.
 #include <stdio.h>
 
