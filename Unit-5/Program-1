@@ -1,1 +1,38 @@
+#1# Pointer to an Integer Variable
+Problem Statement
+Write a C program to declare a pointer, initialize it with the address of an integer variable, and
+display the value and address of the variable using both the variable and the pointer.
+Program
+#include &lt;stdio.h&gt;
 
+int main()
+{
+int num;
+int *ptr;
+
+printf(&quot;Enter an integer: &quot;);
+scanf(&quot;%d&quot;, &amp;num);
+
+ptr = &amp;num;
+
+printf(&quot;\nUsing Variable:\n&quot;);
+printf(&quot;Value of variable = %d\n&quot;, num);
+printf(&quot;Address of variable = %p\n&quot;, (void *)&amp;num);
+
+printf(&quot;\nUsing Pointer:\n&quot;);
+printf(&quot;Value using pointer = %d\n&quot;, *ptr);
+printf(&quot;Address using pointer = %p\n&quot;, (void *)ptr);
+
+return 0;
+}
+Output
+Enter an integer: 25
+
+Using Variable:
+Value of variable = 25
+Address of variable = 0x7ffd1234
+
+Using Pointer:
+Value using pointer = 25
+Address using pointer = 0x7ffd1234
+Note: The memory address will be different on different systems or executions.
