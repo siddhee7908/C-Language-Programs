@@ -1,1 +1,93 @@
+#5# String Operations Using Inbuilt Functions
+Problem Statement
+Write a C program to accept two strings and perform the following operations using inbuilt
+string functions:
+1. Copy one string into another
+2. Reverse the string
+3. Find the length of the string
+4. Compare two strings
+5. Concatenate one string to another
+Program
+#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+
+int main()
+{
+char str1[100];
+
+char str2[100];
+char copy[100];
+char reverse[100];
+int length;
+int i;
+int result;
+
+printf(&quot;Enter first string: &quot;);
+scanf(&quot; %[^\n]&quot;, str1);
+
+printf(&quot;Enter second string: &quot;);
+scanf(&quot; %[^\n]&quot;, str2);
+
+/* 5.1 Copy one string into another */
+strcpy(copy, str1);
+
+printf(&quot;\n5.1 Copy Operation:\n&quot;);
+printf(&quot;Copied string = %s\n&quot;, copy);
+
+/* 5.2 Reverse the string */
+strcpy(reverse, str1);
+
+length = strlen(reverse);
+
+for (i = 0; i &lt; length / 2; i++)
+{
+
+char temp;
+
+temp = reverse[i];
+reverse[i] = reverse[length - 1 - i];
+reverse[length - 1 - i] = temp;
+}
+
+printf(&quot;\n5.2 Reverse Operation:\n&quot;);
+printf(&quot;Reverse of first string = %s\n&quot;, reverse);
+
+/* 5.3 Length of the string */
+printf(&quot;\n5.3 Length Operation:\n&quot;);
+printf(&quot;Length of first string = %lu\n&quot;, strlen(str1));
+printf(&quot;Length of second string = %lu\n&quot;, strlen(str2));
+
+/* 5.4 Compare two strings */
+result = strcmp(str1, str2);
+
+printf(&quot;\n5.4 Compare Operation:\n&quot;);
+
+if (result == 0)
+{
+printf(&quot;Both strings are equal.\n&quot;);
+}
+else if (result &lt; 0)
+{
+
+printf(&quot;First string is smaller than second string.\n&quot;);
+}
+else
+{
+printf(&quot;First string is greater than second string.\n&quot;);
+}
+
+/* 5.5 Concatenate one string to another */
+strcat(str1, str2);
+
+printf(&quot;\n5.5 Concatenation Operation:\n&quot;);
+printf(&quot;Concatenated string = %s\n&quot;, str1);
+
+return 0;
+}
+Output
+Enter first string: Hello
+Enter second string: World
+
+5.1 Copy Operation:
+Copied string = Hello
 
