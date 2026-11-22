@@ -1,1 +1,46 @@
+#2# Double Pointer
+Problem Statement
+Write a C program to declare a double pointer and display the values stored in the variable,
+pointer, and double pointer.
+Program
+#include &lt;stdio.h&gt;
 
+int main()
+{
+int num;
+int *ptr;
+int **dptr;
+
+printf(&quot;Enter an integer: &quot;);
+scanf(&quot;%d&quot;, &amp;num);
+
+ptr = &amp;num;
+dptr = &amp;ptr;
+
+printf(&quot;\nValue of variable = %d\n&quot;, num);
+printf(&quot;Value using pointer = %d\n&quot;, *ptr);
+printf(&quot;Value using double pointer = %d\n&quot;, **dptr);
+
+printf(&quot;\nAddress of variable = %p\n&quot;, (void *)&amp;num);
+printf(&quot;Address stored in pointer = %p\n&quot;, (void *)ptr);
+printf(&quot;Address stored in double pointer = %p\n&quot;, (void *)dptr);
+
+return 0;
+}
+Output
+Enter an integer: 50
+
+Value of variable = 50
+Value using pointer = 50
+Value using double pointer = 50
+
+Address of variable = 0x7ffd1234
+Address stored in pointer = 0x7ffd1234
+
+Address stored in double pointer = 0x7ffd1238
+Explanation
+ num stores the actual value.
+ ptr stores the address of num.
+ dptr stores the address of ptr.
+ *ptr gives the value of num.
+ **dptr also gives the value of num.
