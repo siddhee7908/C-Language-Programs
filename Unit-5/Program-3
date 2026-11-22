@@ -1,1 +1,48 @@
+#3# Exchange Two Values Using Call by Reference
+Problem Statement
+Write a C program to exchange the values of two variables using call by reference.
+Program
+#include &lt;stdio.h&gt;
 
+void swap(int *a, int *b)
+{
+int temp;
+
+temp = *a;
+*a = *b;
+*b = temp;
+}
+
+int main()
+{
+int num1, num2;
+
+printf(&quot;Enter first number: &quot;);
+scanf(&quot;%d&quot;, &amp;num1);
+
+printf(&quot;Enter second number: &quot;);
+scanf(&quot;%d&quot;, &amp;num2);
+
+printf(&quot;\nBefore swapping:\n&quot;);
+printf(&quot;First number = %d\n&quot;, num1);
+printf(&quot;Second number = %d\n&quot;, num2);
+
+swap(&amp;num1, &amp;num2);
+
+printf(&quot;\nAfter swapping:\n&quot;);
+printf(&quot;First number = %d\n&quot;, num1);
+printf(&quot;Second number = %d\n&quot;, num2);
+
+return 0;
+}
+Output
+Enter first number: 10
+Enter second number: 20
+
+Before swapping:
+First number = 10
+Second number = 20
+
+After swapping:
+First number = 20
+Second number = 10
