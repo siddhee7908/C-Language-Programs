@@ -90,4 +90,16 @@ Enter second string: World
 
 5.1 Copy Operation:
 Copied string = Hello
+5.2 Reverse Operation:
+Reverse of first string = olleH
 
+5.3 Length Operation:
+
+Length of first string = 5
+Length of second string = 5
+
+5.4 Compare Operation:
+First string is smaller than second string.
+
+5.5 Concatenation Operation:
+Concatenated string = HelloWorld
