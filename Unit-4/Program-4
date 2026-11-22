@@ -1,1 +1,40 @@
+#4# Length and Reverse of a String Without Built-in Functions
+Problem Statement
+Write a C program to accept a string from the user and, without using any built-in string
+functions, find the length of the string and display the string in reverse order.
 
+Program
+#include &lt;stdio.h&gt;
+
+int main()
+{
+char str[100];
+int length = 0;
+int i;
+
+printf(&quot;Enter a string: &quot;);
+scanf(&quot; %[^\n]&quot;, str);
+
+while (str[length] != &#39;\0&#39;)
+{
+length++;
+}
+
+printf(&quot;\nLength of the string = %d\n&quot;, length);
+
+printf(&quot;Reverse of the string = &quot;);
+
+for (i = length - 1; i &gt;= 0; i--)
+{
+printf(&quot;%c&quot;, str[i]);
+}
+
+printf(&quot;\n&quot;);
+
+return 0;
+}
+Output
+Enter a string: Hello World
+
+Length of the string = 11
+Reverse of the string = dlroW olleH
