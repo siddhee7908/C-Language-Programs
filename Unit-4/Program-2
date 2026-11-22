@@ -1,4 +1,5 @@
-#2# Problem Statement
+#2# Demonstration of Union and Shared Memory
+Problem Statement
 Write a C program to define a union containing an integer, a float, and a character, and
 demonstrate how memory is shared among its members.
 Program
