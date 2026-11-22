@@ -1,1 +1,62 @@
+#2# Problem Statement
+Write a C program to define a union containing an integer, a float, and a character, and
+demonstrate how memory is shared among its members.
+Program
+#include &lt;stdio.h&gt;
 
+union Data
+{
+int integer;
+
+float decimal;
+char character;
+};
+
+int main()
+{
+union Data data;
+
+printf(&quot;Size of union = %lu bytes\n&quot;, sizeof(data));
+
+data.integer = 100;
+
+printf(&quot;\nAfter storing integer:\n&quot;);
+printf(&quot;Integer = %d\n&quot;, data.integer);
+
+data.decimal = 25.5;
+
+printf(&quot;\nAfter storing float:\n&quot;);
+printf(&quot;Float = %.2f\n&quot;, data.decimal);
+
+data.character = &#39;A&#39;;
+
+printf(&quot;\nAfter storing character:\n&quot;);
+printf(&quot;Character = %c\n&quot;, data.character);
+
+printf(&quot;\nMemory addresses of union members:\n&quot;);
+
+printf(&quot;Address of integer = %p\n&quot;, (void *)&amp;data.integer);
+printf(&quot;Address of float = %p\n&quot;, (void *)&amp;data.decimal);
+printf(&quot;Address of character = %p\n&quot;, (void *)&amp;data.character);
+
+return 0;
+}
+Output
+Size of union = 4 bytes
+
+After storing integer:
+Integer = 100
+
+After storing float:
+Float = 25.50
+
+After storing character:
+Character = A
+
+Memory addresses of union members:
+Address of integer = 0x7ffd1234
+Address of float = 0x7ffd1234
+Address of character = 0x7ffd1234
+Note: All union members share the same memory location. Therefore, storing a new value in
+one member overwrites the value previously stored in another member.
+The exact memory address and union size may vary depending on the compiler and system.
