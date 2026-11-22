@@ -1,4 +1,5 @@
-#1# Problem Statement
+#1# Student Details Using Structure
+Problem Statement
 Write a C program using a structure to store the details of a student, including roll number,
 name, and marks in three subjects. Accept the input from the user, calculate the total and
 average of the marks, and display the student&#39;s details, total marks, and average marks.
