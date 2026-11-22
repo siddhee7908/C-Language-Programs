@@ -1,1 +1,67 @@
+#1# Problem Statement
+Write a C program using a structure to store the details of a student, including roll number,
+name, and marks in three subjects. Accept the input from the user, calculate the total and
+average of the marks, and display the student&#39;s details, total marks, and average marks.
+Program
+#include &lt;stdio.h&gt;
 
+struct Student
+{
+int rollNo;
+char name[50];
+float marks1;
+float marks2;
+float marks3;
+float total;
+float average;
+};
+
+int main()
+{
+struct Student s;
+
+printf(&quot;Enter Roll Number: &quot;);
+scanf(&quot;%d&quot;, &amp;s.rollNo);
+
+printf(&quot;Enter Name: &quot;);
+scanf(&quot; %[^\n]&quot;, s.name);
+
+printf(&quot;Enter marks in Subject 1: &quot;);
+scanf(&quot;%f&quot;, &amp;s.marks1);
+
+printf(&quot;Enter marks in Subject 2: &quot;);
+scanf(&quot;%f&quot;, &amp;s.marks2);
+
+printf(&quot;Enter marks in Subject 3: &quot;);
+scanf(&quot;%f&quot;, &amp;s.marks3);
+
+s.total = s.marks1 + s.marks2 + s.marks3;
+s.average = s.total / 3;
+
+printf(&quot;\n----- Student Details -----\n&quot;);
+printf(&quot;Roll Number = %d\n&quot;, s.rollNo);
+printf(&quot;Name = %s\n&quot;, s.name);
+printf(&quot;Subject 1 Marks = %.2f\n&quot;, s.marks1);
+printf(&quot;Subject 2 Marks = %.2f\n&quot;, s.marks2);
+printf(&quot;Subject 3 Marks = %.2f\n&quot;, s.marks3);
+printf(&quot;Total Marks = %.2f\n&quot;, s.total);
+printf(&quot;Average Marks = %.2f\n&quot;, s.average);
+
+return 0;
+}
+
+Output
+Enter Roll Number: 101
+Enter Name: Rahul
+Enter marks in Subject 1: 85
+Enter marks in Subject 2: 90
+Enter marks in Subject 3: 80
+
+----- Student Details -----
+Roll Number = 101
+Name = Rahul
+Subject 1 Marks = 85.00
+Subject 2 Marks = 90.00
+Subject 3 Marks = 80.00
+Total Marks = 255.00
+Average Marks = 85.00
